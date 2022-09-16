@@ -3,7 +3,7 @@
   <Document name="iris-climatiq-adapter.ZPM">
     <Module>
       <Name>iris-climatiq-adapter</Name>
-      <Version>1.0.1</Version>
+      <Version>1.0.2</Version>
       <Description>An IRIS Interoperability adapter for using the Climatiq API</Description>
       <Packaging>module</Packaging>
       <SourcesRoot>src</SourcesRoot>
