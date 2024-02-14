@@ -7,7 +7,7 @@ XData ProductionDefinition
   <Description></Description>
   <ActorPoolSize>2</ActorPoolSize>
   <Item Name="ClimatiqOperation" Category="" ClassName="dc.jrpereirajr.interop.adapter.climatiq.ClimatiqOperation" PoolSize="1" Enabled="true" Foreground="false" Comment="" LogTraceEvents="true" Schedule="">
-    <Setting Target="Adapter" Name="ApiKey">A9G61KBCFJ4VCGJQ7GHH5FZJMNTG</Setting>
+    <Setting Target="Adapter" Name="ApiKey">your API key</Setting>
     <Setting Target="Adapter" Name="SSLConfig">ISC.FeatureTracker.SSL.Config</Setting>
   </Item>
 </Production>
