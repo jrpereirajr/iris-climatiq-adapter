@@ -3,7 +3,7 @@ Class dc.jrpereirajr.interop.adapter.climatiq.ClimatiqOutboundAdapter Extends En
 
 Property SSLConfig As %String;
 
-Property ApiVersion As %String [ InitialExpression = "beta3" ];
+Property ApiVersion As %String [ InitialExpression = "beta4" ];
 
 Property ApiKey As %String;
 
@@ -20,11 +20,19 @@ Method OnInit() As %Status
 	Return $$$OK
 }
 
-Method EstimateGeneric(ByRef pRequest As dc.jrpereirajr.interop.adapter.climatiq.msg.beta3.EstimateMsg, Output pResponse As Ens.Response) As %Status
+Method EstimateGeneric(pRequest As dc.jrpereirajr.interop.adapter.climatiq.msg.beta3.EstimateMsg, Output pResponse As Ens.Response) As %Status
 {
     Set st = $$$OK
     Try {
-        Set pResponse = ..Api.EstimateGeneric(pRequest)
+        #Dim apiResponse As %Net.HttpResponse = ..Api.EstimateGeneric(pRequest)
+        If $isobject(apiResponse.Data) {
+            Set data = apiResponse.Data.Read()
+        } ElseIf $length(apiResponse.Data)>0 {
+            Set data = apiResponse.Data
+        }
+
+        Set pResponse = ##class(dc.jrpereirajr.interop.adapter.climatiq.msg.beta4.EstimationResponseMsg).%New()
+        $$$TOE(st, pResponse.%JSONImport(data))
     }
     Catch(e) {
         Set st = e.AsStatus()

@@ -8,6 +8,8 @@ Property Adapter As dc.jrpereirajr.interop.adapter.climatiq.ClimatiqOutboundAdap
 ClassMethod GetApi(pApiVersion As %String) As dc.jrpereirajr.interop.adapter.climatiq.Api
 {
     If (pApiVersion = "beta3") {
+        Throw ##class(%Exception.General).%New("This API has been achieved its end of life: "_pApiVersion)
+    } ElseIf (pApiVersion = "beta4") {
         Return ##class(dc.jrpereirajr.interop.adapter.climatiq.ApiBeta3).%New()
     } Else {
         Throw ##class(%Exception.General).%New("API version not supported: "_pApiVersion)
