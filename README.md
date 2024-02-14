@@ -58,7 +58,7 @@ $ docker-compose exec iris1 iris session iris
 USER>
 ```
 
-After you are done, you can access a[sample IRIS production](http://localhost:42773/csp/user/EnsPortal.ProductionConfig.zen?PRODUCTION=dc.jrpereirajr.interop.adapter.climatiq.samples.SampleProduction) with the Climatiq Business Operation using the  Climatiq Output Adapter:
+After you are done, you can access a [sample IRIS production](http://localhost:42773/csp/user/EnsPortal.ProductionConfig.zen?PRODUCTION=dc.jrpereirajr.interop.adapter.climatiq.samples.SampleProduction) with the Climatiq Business Operation using the  Climatiq Output Adapter:
 
 ![](https://raw.githubusercontent.com/jrpereirajr/iris-climatiq-adapter/main/img/chrome_9lFuMDSU72.png)
 
@@ -73,9 +73,13 @@ You also have to set up a SSL configuration in the Climatiq Business Operation, 
 After you are done, you can start the IRIS Interoperaiblity production and test the Climatiq Business Operation:
 
 ![](https://raw.githubusercontent.com/jrpereirajr/iris-climatiq-adapter/main/img/USFKjxuIZb.png)
+
 ![](https://raw.githubusercontent.com/jrpereirajr/iris-climatiq-adapter/main/img/D9cjPfaAlg.png)
+
 ![](https://raw.githubusercontent.com/jrpereirajr/iris-climatiq-adapter/main/img/qIxcdl0Nlj.png)
+
 ![](https://raw.githubusercontent.com/jrpereirajr/iris-climatiq-adapter/main/img/zyLAerfrAo.png)
+
 ![](https://raw.githubusercontent.com/jrpereirajr/iris-climatiq-adapter/main/img/nAxZrj2TFF.png)
 
 Note that you ask to Climatiq estimate the CO2 emissions for US$ 100 of water treatment, which climatiq estimate as emiting 409.1 kg of CO2.
